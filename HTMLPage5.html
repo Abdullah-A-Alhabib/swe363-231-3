@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Chicken Test</title>
+</head>
+<body>
+    <header>Welcome to the Chicken Test</header>
+    <p>Take this test to determine whether or not you can become a chicken.</p>
+
+    <form action="HTMLPage6.html">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required autocomplete="on" placeholder="Name"> <br />
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required autocomplete="on" placeholder="Email address"><br />
+        <label for="password">Password</label>
+        <input type="password" id="password" name="passwod" required autocomplete="on" placeholder="Password for your email address"><br />
+        <label for="date">Current Date</label>
+        <input type="date" id="date" name="date" required autocomplete="on" /><br />
+        <label for="tel">Telephone Number</label>
+        <input type="tel" id="tel" name="tel" required autocomplete="on" placeholder="Your telephone number"><br />
+        <label for="question">What is your favourite animal?</label>
+        <input type="text" id="question" name="question" required autocomplete="on" list="animals" > <br />
+        <input type="submit" value="Get Results" /><br />
+
+        <a href="HTMLPage1.html">I have lost interest-- Take me back</a>
+
+        <datalist id="animals">
+            <option value="RUBY-THROATED HUMMINGBIRD">
+            <option value="PENNSYLVANIA WOOD COCKROACH">
+            <option value="EASTERN DIAMONDBACK RATTLESNAKE">
+            <option value="SOUTHERN TITIWANGSA BENT-TOED GECKO">
+            <option value="chicken">
+        </datalist>
+    </form>
+
+</body>
+</html>
