@@ -1,0 +1,85 @@
+﻿body
+{
+    color:white;
+    background-color:black;
+}
+
+a {
+    color:cyan;
+}
+
+header{
+    padding: 40px;
+}
+
+header li{
+    display: inline;
+    background-color: green;
+}
+
+header ul {
+    padding-inline-start: 0;
+}
+
+/* Color Theme Swatches in Hex */
+.A-day-in-the-barn-1-hex {
+    color: #D99A4E;
+}
+
+.A-day-in-the-barn-2-hex {
+    color: #BF7E45;
+}
+
+.A-day-in-the-barn-3-hex {
+    color: #592A0E;
+}
+
+.A-day-in-the-barn-4-hex {
+    color: #8C593B;
+}
+
+.A-day-in-the-barn-5-hex {
+    color: #D9BBA9;
+}
+
+/* Color Theme Swatches in RGBA */
+.A-day-in-the-barn-1-rgba {
+    color: rgba(216, 154, 78, 1);
+}
+
+.A-day-in-the-barn-2-rgba {
+    color: rgba(191, 125, 68, 1);
+}
+
+.A-day-in-the-barn-3-rgba {
+    color: rgba(89, 41, 14, 1);
+}
+
+.A-day-in-the-barn-4-rgba {
+    color: rgba(140, 88, 58, 1);
+}
+
+.A-day-in-the-barn-5-rgba {
+    color: rgba(216, 186, 169, 1);
+}
+
+/* Color Theme Swatches in HSLA */
+barn1 {
+    color: hsla(33, 64, 57, 1);
+}
+
+barn2 {
+    color: hsla(28, 48, 51, 1);
+}
+
+barn3 {
+    color: hsla(22, 72, 20, 1);
+}
+
+barn4 {
+    color: hsla(22, 40, 39, 1);
+}
+
+barn5 {
+    color: hsla(22, 38, 75, 1);
+}
