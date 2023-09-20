@@ -5,11 +5,22 @@
 }
 
 a {
-    color:cyan;
+    color:green;
 }
+
+table{
+    
+}
+
+em{
+    background-color:blue;
+}
+
+em
 
 header{
     padding: 40px;
+   text-transform:capitalize;
 }
 
 header li{
@@ -19,6 +30,18 @@ header li{
 
 header ul {
     padding-inline-start: 0;
+}
+
+h2{
+    font-family: sans-serif;
+}
+
+nav{
+    
+}
+
+input{
+    
 }
 
 /* Color Theme Swatches in Hex */
