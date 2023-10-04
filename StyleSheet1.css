@@ -6,17 +6,30 @@
 
 a {
     color:green;
+    text-decoration:none
 }
 
-table{
-    
+a:hover{
+    cursor:pointer;
+}
+
+table[class="top"]{
+    color:gold;
+}
+
+td:hover{
+    color:lightgreen;
+    background-color:lightcoral;
 }
 
 em{
     background-color:blue;
 }
 
-em
+#the_most_important{
+    background-color:gold;
+    text-transform:capitalize;
+}
 
 header{
     padding: 40px;
@@ -40,20 +53,83 @@ nav{
     display:inline;
 }
 
+nav li:first-child{
+    text-decoration:underline;
+}
+
+table td:nth-child(even){
+    background-color:darkslategrey;
+}
+
+::selection {
+    color: red;
+    background: yellow;
+}
+
 input{
-    
+    height:20px;
+}
+
+input[id=name]{
+    height:50px;
+}
+
+input[type=text]{
+    border-color:lightgray;
 }
 
 .content {
     display: none;
 }
 
-.preload {
-    width: 100px;
-    height: 100px;
-    position: fixed;
-    top: 50%;
-    left: 50%;
+input[type=button]{
+    background-color: brown;
+    transition: background-color 0.5s;
+}
+
+input[type=button]:hover{
+    background-color:green;
+}
+
+img[id="chknb"]{
+    height: 25px;
+    width: 25px;
+    opacity:0;
+    transition: opacity 2s;
+}
+
+img[id="chknb"]:hover{
+    opacity: 1;
+}
+
+@keyframes loadit{
+    0% {
+        width: 1000px;
+        height: 1000px;
+        opacity: 1;
+    }
+
+    50% {
+        width: 1000px;
+        height: 1000px;
+        opacity: 1;
+    }
+    80%{
+        opacity: 0;
+    }
+
+    100% {
+        width: 0px;
+        height: 0px;
+    }
+}
+
+div[class="preload"] {
+    opacity: 0;
+    width: 0;
+    height: 0px;
+    animation-name: loadit;
+    animation-duration: 3s;
 }
 
 /* Color Theme Swatches in Hex */
