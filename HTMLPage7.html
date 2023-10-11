@@ -40,7 +40,7 @@
 
 <body>
     <h1 id="turn">
-        Now it's is <span>X</span>'s turn
+        Now it's <span>X</span>'s turn
     </h1>
     <!-- Board -->
     <div class="board">
@@ -71,13 +71,117 @@
 
             function cellClicked(event) {
                 let cell = event.target
-                if (turn != "Nobody's") {
+                if (turn != "no one") {
                     cell.innerText = turn
                 }
 
                 if (gameEnded) {
-                    turn = "Nobody";
-                } else {
+                    let winner = 0
+                    let winType = 0
+                    let cellLetter = board.getElementsByClassName("cell")
+                    console.log(cellLetter[1].innerText)
+                    if (cellLetter[0].innerText == cellLetter[1].innerText && cellLetter[0].innerText == cellLetter[2].innerText) {
+                        winType = 1
+                    }
+                    else if (cellLetter[3].innerText === cellLetter[4].innerText && cellLetter[3].innerText == cellLetter[5].innerText) {
+                        winType = 2
+                    }
+                    else if (cellLetter[6].innerText === cellLetter[7].innerText && cellLetter[6].innerText == cellLetter[8].innerText) {
+                        winType = 3
+                    }
+                    else if (cellLetter[0].innerText === cellLetter[3].innerText && cellLetter[0].innerText == cellLetter[6].innerText) {
+                        winType = 4
+                    }
+                    else if (cellLetter[1].innerText === cellLetter[4].innerText && cellLetter[1].innerText == cellLetter[7].innerText) {
+                        winType = 5
+                    }
+                    else if (cellLetter[2].innerText === cellLetter[5].innerText && cellLetter[2].innerText == cellLetter[8].innerText) {
+                        winType = 6
+                    }
+                    else if (cellLetter[0].innerText === cellLetter[4].innerText && cellLetter[0].innerText == cellLetter[8].innerText) {
+                        winType = 7
+                    }
+                    else if (cellLetter[2].innerText === cellLetter[4].innerText && cellLetter[2].innerText == cellLetter[6].innerText) {
+                        winType = 8
+                    }
+                    switch (winType) {
+                        case 0:
+                            winner = 0
+                            break
+                        case 1:
+                            if (cellLetter[0].innerText == "X") {
+                                winner = 1
+                            }
+                            else {
+                                winner = 2
+                            }
+                        case 2:
+                            if (cellLetter[3].innerText == "X") {
+                                winner = 1
+                            }
+                            else {
+                                winner = 2
+                            }
+                        case 3:
+                            if (cellLetter[6].innerText == "X") {
+                                winner = 1
+                            }
+                            else {
+                                winner = 2
+                            }
+                        case 4:
+                            if (cellLetter[0].innerText == "X") {
+                                winner = 1
+                            }
+                            else {
+                                winner = 2
+                            }
+                        case 5:
+                            if (cellLetter[1].innerText == "X") {
+                                winner = 1
+                            }
+                            else {
+                                winner = 2
+                            }
+                        case 6:
+                            if (cellLetter[2].innerText == "X") {
+                                winner = 1
+                            }
+                            else {
+                                winner = 2
+                            }
+                        case 7:
+                            if (cellLetter[0].innerText == "X") {
+                                winner = 2
+                            }
+                            else {
+                                winner = 1
+                            }
+                        case 8:
+                            if (cellLetter[2].innerText == "X") {
+                                winner = 2
+                            }
+                            else {
+                                winner = 1
+                            }
+                    }
+
+
+                    if (winner == 1) {
+                        winnerIs = document.querySelector("#winnerAnnounce span")
+                        winnerIs.innerText = "O Wins!"
+                    }
+                    else if (winner == 2) {
+                        winnerIs = document.querySelector("#winnerAnnounce span")
+                        winnerIs.innerText = "X Wins!"
+                    }
+                    else {
+                        winnerIs = document.querySelector("#winnerAnnounce span")
+                        winnerIs.innerText = "Tie!"
+                    }
+
+                }
+                else {
                     // change turn
                     turn = turn === "X" ? "O" : "X"
 
@@ -87,18 +191,39 @@
 
                     let ending = true
                     for (let i = 0; i < 9; i++) {
-                        console.log(board.getElementsByClassName("cell")[i].innerText)
+                        // console.log(board.getElementsByClassName("cell")[i].innerText)
                         if (board.getElementsByClassName("cell")[i].innerText === "") {
                             ending = false
                         }
-                        if (ending == true) {
-                            gameEnded = true
-                        }
+                    }
+                    if (ending == true) {
+                        gameEnded = true
+                        turn = "no one";
+                        turnLetter.innerText = turn
                     }
                 }
             }
+            function reset() {
+                winnerIs = document.querySelector("#winnerAnnounce span")
+                winnerIs.innerText = ""
+                turnLetter = document.querySelector("#turn span")
+                turnLetter.innerText = turn
+                gameEnded = false
+                winner = 0
+                winnerIs = 0
+                ending = false
+                turn = "X"
+                for (let i = 0; i < 9; i++) {
+                    board.getElementsByClassName("cell")[i].innerText = ""
+                    }
+            }
         </script>
     </div>
+    <h2 id="winnerAnnounce">
+        <span></span>
+    </h2>
+    <br />
+    <button onclick="reset()">Reset</button>
 </body>
 
 </html>
