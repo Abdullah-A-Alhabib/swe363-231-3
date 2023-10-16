@@ -69,6 +69,15 @@
             let board = document.getElementsByClassName("board")[0]
             board.addEventListener("click", cellClicked)
 
+
+            board.addEventListener("keydown",move)
+
+            function move(event) {
+                console.log(event.key)
+            }
+
+
+
             function cellClicked(event) {
                 let cell = event.target
                 if (turn != "no one") {

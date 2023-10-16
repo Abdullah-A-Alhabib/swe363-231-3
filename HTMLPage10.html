@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="StyleSheet1.css">
+</head>
+<body>
+    <script>
+        async function getChicken() {
+            const response = await fetch("https://random-d.uk/api or https://random-d.uk/api/v2")
+            const chickenses = await response.json()
+            console.log(chickenses);
+        }
+
+        getChicken()
+
+    </script>
+
+</body>
+</html>
