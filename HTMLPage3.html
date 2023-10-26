@@ -8,6 +8,18 @@
     <link rel="stylesheet" href="StyleSheet1.css">
 </head>
 <body>
+    <script>
+
+        const map1 = new Map();
+
+        map1.set('p1', "Legs");
+        map1.set('p2', Beak);
+        map1.set('p3', Feathers);
+
+        document.getElementById("m1").innerHTML = map.get("p1")
+        document.getElementById("m2").innerHTML = map.get("p2")
+        document.getElementById("m3").innerHTML = map.get("p3")
+    </script>
     <article>
         Chicken anatomy: <br />
 
@@ -20,19 +32,19 @@
                 <th class="top">Colour</th>
             </tr>
             <tr>
-                <td>Legs</td>
+                <td id="m1"></td>
                 <td>Bipedal Locomotion</td>
                 <td>Record Jumps</td>
                 <td>Yellow</td>
             </tr>
             <tr>
-                <td>Beak</td>
+                <td id="m2"></td>
                 <td>Om nom nom</td>
                 <td>Put cats in their place</td>
                 <td>Red (cat blood)</td>
             </tr>
             <tr>
-                <td>Feathers</td>
+                <td id="m3"></td>
                 <td>Store Heat</td>
                 <td>Lure Humans</td>
                 <td>Various</td>

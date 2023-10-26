@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="preload">
-        <img src="ChickenLoader.png" alt="Loading" />
+        <img id ="hiddenChicken" src="ChickenLoader.png" alt="Loading" />
         <br /><i>Loading...</i>
     </div>
 
@@ -29,16 +29,27 @@
                 <a href="HTMLPage2.html">Contacts</a>
             </li>
             <li>
-                <a href="HTMLPage8.html">Bootstrap Inclusive page</a>
+                <a href="HTMLPage8.html">Bootstrap Inclusive Page</a>
             </li>
         </ul>
     </nav>
     <header>
         <h1>i liek chikenz</h1>
-        <img src="chikz.jpg" width="400" height="400">
+        <script>
+            src = "Script1.js";
+            let chkn = new rectangularChicken(400, 400);
+            chkn.showchicken();
+
+            document.getElementById("hiddenChicken").innerHTML = function () {
+                const img = new Image(50, 50);
+                img.src = "chikz.jpg";
+                document.body.appendChild(img);
+            }
+        </script>
     </header>
 
     <main>
+        <img />
         <article>This website is about chickens. Chicken-like avians are also included.</article>
         <br />
 
