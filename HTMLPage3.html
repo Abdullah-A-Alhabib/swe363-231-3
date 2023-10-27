@@ -8,48 +8,37 @@
     <link rel="stylesheet" href="StyleSheet1.css">
 </head>
 <body>
-    <script>
 
-        const map1 = new Map();
-
-        map1.set('p1', "Legs");
-        map1.set('p2', Beak);
-        map1.set('p3', Feathers);
-
-        document.getElementById("m1").innerHTML = map.get("p1")
-        document.getElementById("m2").innerHTML = map.get("p2")
-        document.getElementById("m3").innerHTML = map.get("p3")
-    </script>
     <article>
         Chicken anatomy: <br />
 
         <figure>
-        <table border="1">
-            <tr>
-                <th class="top">Chicken Part</th>
-                <th class="top">Main Usage</th>
-                <th class="top">Auxiliary Usage</th>
-                <th class="top">Colour</th>
-            </tr>
-            <tr>
-                <td id="m1"></td>
-                <td>Bipedal Locomotion</td>
-                <td>Record Jumps</td>
-                <td>Yellow</td>
-            </tr>
-            <tr>
-                <td id="m2"></td>
-                <td>Om nom nom</td>
-                <td>Put cats in their place</td>
-                <td>Red (cat blood)</td>
-            </tr>
-            <tr>
-                <td id="m3"></td>
-                <td>Store Heat</td>
-                <td>Lure Humans</td>
-                <td>Various</td>
-            </tr>
-        </table>
+            <table border="1">
+                <tr>
+                    <th class="top">Chicken Part</th>
+                    <th class="top">Main Usage</th>
+                    <th class="top">Auxiliary Usage</th>
+                    <th class="top">Colour</th>
+                </tr>
+                <tr>
+                    <td id="m1"></td>
+                    <td>Bipedal Locomotion</td>
+                    <td>Record Jumps</td>
+                    <td>Yellow</td>
+                </tr>
+                <tr>
+                    <td id="m2"></td>
+                    <td>Om nom nom</td>
+                    <td>Put cats in their place</td>
+                    <td>Red (cat blood)</td>
+                </tr>
+                <tr>
+                    <td id="m3"></td>
+                    <td>Store Heat</td>
+                    <td>Lure Humans</td>
+                    <td>Various</td>
+                </tr>
+            </table>
         </figure>
         <br />
 
@@ -64,6 +53,19 @@
             <li>Because the current state of the universe aptly allows for the occurrence of chicken.</li>
         </ul>
     </article>
+    <script>
+
+        const map1 = new Map();
+
+        map1.set('p1', "Legs");
+        map1.set('p2', "Beak");
+        map1.set('p3', "Feathers");
+        console.log(map1.get('p1'));
+
+        document.getElementById("m1").innerHTML = map1.get("p1");
+        document.getElementById("m2").innerHTML = map1.get("p2");
+        document.getElementById("m3").innerHTML = map1.get("p3");
+    </script>
 
     <a href="HTMLPage1.html">Back</a>
 </body>

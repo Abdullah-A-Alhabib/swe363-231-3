@@ -6,8 +6,10 @@ class rectangularChicken {
     }
 
     showchicken() {
-        const img = new Image(this.height, this.width);
-        img.src = "chikz.jpg";
+        const img = new Image(this.width, this.height);
+        img.src = "chiknbutn.png";
         document.body.appendChild(img);
     }
 }
+let x = new rectangularChicken(50, 50);
+x.showchicken();

@@ -10,9 +10,10 @@
 </head>
 <body>
     <div class="preload">
-        <img id ="hiddenChicken" src="ChickenLoader.png" alt="Loading" />
+        <img id="hiddenChicken" src="ChickenLoader.png" alt="Loading" />
         <br /><i>Loading...</i>
     </div>
+    <script src="Script1.js"></script>
 
     <nav>
         <ul>
@@ -35,17 +36,7 @@
     </nav>
     <header>
         <h1>i liek chikenz</h1>
-        <script>
-            src = "Script1.js";
-            let chkn = new rectangularChicken(400, 400);
-            chkn.showchicken();
 
-            document.getElementById("hiddenChicken").innerHTML = function () {
-                const img = new Image(50, 50);
-                img.src = "chikz.jpg";
-                document.body.appendChild(img);
-            }
-        </script>
     </header>
 
     <main>
@@ -61,12 +52,23 @@
     </article>
 
     <footer>
-            <a href="HTMLPage1.html">Home</a>
-            <a href="HTMLPage3.html">Details</a>
-            <a href="HTMLPage2.html">Contacts</a>
-            <a href="HTMLPage8.html">Bootstrap Inclusive page</a>
-            <a href="HTMLPage1-ar.html"><i>Go to arabic version</i></a><br />
+        <a href="HTMLPage1.html">Home</a>
+        <a href="HTMLPage3.html">Details</a>
+        <a href="HTMLPage2.html">Contacts</a>
+        <a href="HTMLPage8.html">Bootstrap Inclusive page</a>
+        <a href="HTMLPage1-ar.html"><i>Go to arabic version</i></a><br />
         <p>Luckily, chickens are not copyrighted nor trademarked. Praise the Lord, Amen.</p>
     </footer>
+
+    <script>
+        let chkn = function(a, here) {
+            const img = new Image(a);
+            img.src = "chikz.jpg";
+            document.querySelector(here).appendChild(img);
+        }
+        
+
+        chkn(400, "header");
+    </script>
 </body>
 </html>
